@@ -1,0 +1,21 @@
+Contact:
+  actAs: { Timestampable: ~ }
+  columns:
+    name:   { type: string(255) }
+    nick:   { type: string(255) }
+    addr1:  { type: string(255) }
+    addr2:  { type: string(255) }
+    city:   { type: string(255) }
+    state:  { type: string(2) }
+    zip:    { type: string(10) }
+    email1: { type: string(255) }
+    email2: { type: string(255) }
+
+Note:
+  actAs: { Timestampable: ~ }
+  columns:
+    contact_id: { type: integer, notnull: true }
+    title:      { type: string(255), notnull: true }
+    content:    { type: clob }
+  relations:
+    Contact: { onDelete: CASCADE, type: one, foreignAlias: Notes, foreignType: many, class: Contact }

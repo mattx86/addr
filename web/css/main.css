@@ -1,0 +1,15 @@
+* {
+  font-family: sans-serif;
+  font-size: 10pt;
+}
+table, tr, th, td {
+  border-collapse: collapse;
+  border: 1px solid black;
+  padding: 1px;
+  margin: 2px;
+}
+th {
+  color: white;
+  background-color: black;
+  font-size: 11pt;
+}

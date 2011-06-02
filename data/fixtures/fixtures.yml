@@ -15,3 +15,28 @@
 #     password: changeme
 #     name:     Kris Wallsmith
 #     email:    kris.wallsmith@symfony-project.com
+
+Contact:
+  test_user:
+    name: Test User
+    email1: test.user@matt-desktop.local
+
+  anony_mous:
+    name: Anony Mous
+    email1: anony.mous@addr.local
+
+Note:
+  test_user_note_1:
+    Contact: test_user
+    title: "Testing notes, 1, 2, 3..."
+    content: "Test user's test note content."
+
+  anony_mous_note_1:
+    Contact: anony_mous
+    title: "Test Note #1"
+    content: "Anony Mous's test note #1."
+
+  anony_mous_note_2:
+    Contact: anony_mous
+    title: "Test Note #2"
+    content: "Anony Mous's test note #2."
