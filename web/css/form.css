@@ -1,0 +1,10 @@
+input {
+  display: block;
+}
+
+#contact_form, #contact_form input {
+  width: 300px;
+}
+#submitbtn {
+  width: 100px;
+}

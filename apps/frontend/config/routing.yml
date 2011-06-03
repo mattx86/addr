@@ -1,7 +1,7 @@
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
 
-# project rules
+# contact rules
 contact:
   url:      /
   class:    sfDoctrineRoute
@@ -13,7 +13,20 @@ contact_show:
   class:    sfDoctrineRoute
   options:  { model: Contact, type: object }
   param:    { module: contact, action: show }
-  
+
+contact_edit:
+  url:      /edit/:id
+  class:    sfDoctrineRoute
+  options:  { model: Contact, type: object }
+  param:    { module: contact, action: edit }
+
+contact_update:
+  url:      /update/:id
+  class:    sfDoctrineRoute
+  options:  { model: Contact, type: object }
+  param:    { module: contact, action: update }
+
+# note rules
 note_show:
   url:      /show/:contact_id/note/:id
   class:    sfDoctrineRoute

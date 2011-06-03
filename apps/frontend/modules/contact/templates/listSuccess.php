@@ -1,4 +1,3 @@
-<?php use_stylesheet('main') ?>
 <table width="300">
   <tr>
     <th width="75%">Name</th>

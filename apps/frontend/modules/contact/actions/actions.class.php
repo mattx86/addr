@@ -35,4 +35,34 @@ class contactActions extends sfActions
       ->where('contact_id = ?', $this->contact->getId())
       ->execute();
   }
+
+ /**
+  * Edits the requested contact.
+  *
+  * @param sfRequest $request A request object
+  */  
+  public function executeEdit(sfWebRequest $request)
+  {
+    $this->form = new ContactForm($this->getRoute()->getObject());
+  }
+  
+  public function executeUpdate(sfWebRequest $request)
+  {
+    $this->form = new ContactForm($this->getRoute()->getObject());
+  }
+  
+  public function processForm(sfWebRequest $request, sfForm $form)
+  {
+    $form->bind(
+      $request->getParameter($form->getName()),
+      $request->getFiles($form->getName())
+    );
+    
+    if ($form->isValid())
+    {
+      $contact = $form->save();
+      
+      $this->redirect('contact_show', $contact);
+    }
+  }
 }

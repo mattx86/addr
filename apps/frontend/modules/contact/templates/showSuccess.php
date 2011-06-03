@@ -1,4 +1,3 @@
-<?php use_stylesheet('main') ?>
 <style type="text/css">
 th {
   text-align: right;
@@ -42,6 +41,9 @@ th {
   <tr>
     <th>Secondary E-mail</th>
     <td><?php echo $contact->getEmail2() ?></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="right"><?php echo '<a href="'.url_for('contact/edit?id='.$contact->getId()).'">Edit</a>' ?></td>
   </tr>
 </table>
 
