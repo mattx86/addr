@@ -9,6 +9,10 @@
     <?php include_javascripts() ?>
   </head>
   <body>
+    <?php if ($sf_params->get('module').'_'.$sf_params->get('action') != 'contact_list'): ?>
+      <a href="<?php echo url_for('contact_list') ?>">Go to Contact List</a>
+    <?php endif ?>
+    <br /><br />
     <?php echo $sf_content ?>
   </body>
 </html>

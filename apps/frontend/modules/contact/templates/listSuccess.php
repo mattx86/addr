@@ -1,3 +1,4 @@
+<h1>Contacts</h1>
 <table width="300">
   <tr>
     <th width="75%">Name</th>

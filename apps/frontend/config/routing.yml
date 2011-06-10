@@ -2,7 +2,7 @@
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
 
 # contact rules
-contact:
+contact_list:
   url:      /
   class:    sfDoctrineRoute
   options:  { model: Contact, type: object }
