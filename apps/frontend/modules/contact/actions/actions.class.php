@@ -49,6 +49,8 @@ class contactActions extends sfActions
   public function executeUpdate(sfWebRequest $request)
   {
     $this->form = new ContactForm($this->getRoute()->getObject());
+    $this->processForm($request, $this->form);
+    $this->setTemplate('edit');
   }
   
   public function processForm(sfWebRequest $request, sfForm $form)

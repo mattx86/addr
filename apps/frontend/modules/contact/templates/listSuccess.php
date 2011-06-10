@@ -9,3 +9,4 @@
     <td><?php echo ($contact->getNick()) ? $contact->getNick() : '--' ?></td>
   </tr>
 <?php endforeach ?>
+</table>

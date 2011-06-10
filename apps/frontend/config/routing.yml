@@ -25,6 +25,7 @@ contact_update:
   class:    sfDoctrineRoute
   options:  { model: Contact, type: object }
   param:    { module: contact, action: update }
+  requirements: { sf_method: [put, post] }
 
 # note rules
 note_show:
