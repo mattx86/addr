@@ -46,25 +46,15 @@ class contactActions extends sfActions
     $this->form = new ContactForm($this->getRoute()->getObject());
   }
   
+ /**
+  * Updates the requested contact.
+  *
+  * @param sfRequest $request A request object
+  */
   public function executeUpdate(sfWebRequest $request)
   {
     $this->form = new ContactForm($this->getRoute()->getObject());
-    $this->processForm($request, $this->form);
+    $this->form->processForm($request, $this);
     $this->setTemplate('edit');
-  }
-  
-  public function processForm(sfWebRequest $request, sfForm $form)
-  {
-    $form->bind(
-      $request->getParameter($form->getName()),
-      $request->getFiles($form->getName())
-    );
-    
-    if ($form->isValid())
-    {
-      $contact = $form->save();
-      
-      $this->redirect('contact_show', $contact);
-    }
   }
 }

@@ -13,4 +13,17 @@ abstract class BaseFormDoctrine extends sfFormDoctrine
   public function setup()
   {
   }
+  
+  public function processForm(sfWebRequest $request, sfActions $action)
+  {
+    $this->bind(
+      $request->getParameter($this->getName()),
+      $request->getFiles($this->getName())
+    );
+    
+    if ($this->isValid())
+    {
+      $action->redirect('contact_show', $this->save());
+    }
+  }
 }
