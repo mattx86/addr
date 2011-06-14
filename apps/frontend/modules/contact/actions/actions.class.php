@@ -40,7 +40,7 @@ class contactActions extends sfActions
   * Edits the requested contact.
   *
   * @param sfRequest $request A request object
-  */  
+  */
   public function executeEdit(sfWebRequest $request)
   {
     $this->form = new ContactForm($this->getRoute()->getObject());

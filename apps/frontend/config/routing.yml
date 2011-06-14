@@ -33,3 +33,16 @@ note_show:
   class:    sfDoctrineRoute
   options:  { model: Note, type: object }
   param:    { module: note, action: show }
+
+note_edit:
+  url:      /show/:contact_id/note_edit/:id
+  class:    sfDoctrineRoute
+  options:  { model: Note, type: object }
+  param:    { module: note, action: edit }
+
+note_update:
+  url:      /show/:contact_id/note_update/:id
+  class:    sfDoctrineRoute
+  options:  { model: Note, type: object }
+  param:    { module: note, action: update }
+  requirements: { sf_method: [put, post] }

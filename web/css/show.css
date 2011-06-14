@@ -1,0 +1,64 @@
+#content_container {
+  margin-left: 15px;
+}
+#contact_header {
+  width: 350px;
+}
+#note_details_header {
+  width: 350px;
+  border-bottom: 0;
+  margin-bottom: 10px;
+}
+#note_details {
+  width: 350px;
+}
+#note_details th {
+  font-size: 9pt;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+  padding-bottom: 4px;
+  margin-bottom: 4px;
+}
+#note_details td {
+  padding-top: 4px;
+}
+#contact_notes_header {
+  width: 335px;
+  margin-left: 15px;
+}
+.generic-header {
+  width: 350px;
+}
+
+#contact_list_header {
+  border-bottom: 0;
+}
+#contact_list {
+  width: 350px;
+  margin-left: 15px;
+  border-bottom: 1px solid black;
+}
+#contact_list th {
+  font-size: 9pt;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+  text-align: left;
+}
+#contact_details {
+  width: 350px;
+}
+#contact_details th {
+  font-size: 9pt;
+  font-weight: bold;
+  text-align: right;
+  padding-right: 5px;
+}
+
+#contact_notes_list {
+  margin-left: 30px;
+  width: 320px;
+}
+#contact_notes_list a {
+  width: 100%;
+  display: block;
+}

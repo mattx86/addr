@@ -12,7 +12,12 @@
     <?php if ($sf_params->get('module').'_'.$sf_params->get('action') != 'contact_list'): ?>
       <a href="<?php echo url_for('contact_list') ?>">Go to Contact List</a>
     <?php endif ?>
+    <?php if ($sf_params->get('module').'_'.$sf_params->get('action') == 'note_show'): ?>
+      | <a href="<?php echo url_for('@contact_show?id='.$sf_params->get('contact_id')) ?>">Go back to Contact</a>
+    <?php endif ?>
     <br /><br />
-    <?php echo $sf_content ?>
+    <div id="content_container">
+      <?php echo $sf_content ?>
+    </div>
   </body>
 </html>

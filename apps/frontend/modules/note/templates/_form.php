@@ -1,4 +1,4 @@
-<div id="contact_form">
+<div id="note_form">
   <?php echo form_tag_for($form, '@contact') ?>
     <?php echo $form ?>
     <div class="form-actions">

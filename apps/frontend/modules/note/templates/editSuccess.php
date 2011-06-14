@@ -1,3 +1,3 @@
 <?php use_stylesheet('form') ?>
-<h1 class="generic-header">Edit Contact</h1>
+<h1>Edit Note</h1>
 <?php include_partial('form', array('form' => $form)) ?>

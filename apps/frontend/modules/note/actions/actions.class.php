@@ -19,4 +19,26 @@ class noteActions extends sfActions
   {
     $this->note = $this->getRoute()->getObject();
   }
+  
+ /**
+  * Edits the requested note.
+  *
+  * @param sfRequest $request A request object
+  */  
+  public function executeEdit(sfWebRequest $request)
+  {
+    $this->form = new NoteForm($this->getRoute()->getObject());
+  }
+  
+ /**
+  * Updates the requested note.
+  *
+  * @param sfRequest $request A request object
+  */
+  public function executeUpdate(sfWebRequest $request)
+  {
+    $this->form = new NoteForm($this->getRoute()->getObject());
+    $this->form->processForm($request, $this);
+    $this->setTemplate('edit');
+  }
 }
